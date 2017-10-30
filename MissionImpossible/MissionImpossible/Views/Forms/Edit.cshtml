@@ -1,0 +1,11 @@
+﻿@model MissionImpossible.Models.Form
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm("Update", "Forms", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("_EditForm");
+}

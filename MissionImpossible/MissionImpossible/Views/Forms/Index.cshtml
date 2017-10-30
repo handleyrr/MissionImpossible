@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MissionImpossible.Models.Form>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Add Video", "New")
+</p>
+<ul>
+    @foreach (var form in Model)
+    {
+        <li>@form.Form_name (@form.Type) <br> @form.Description
+            @Html.ActionLink("Edit", "Edit", new { id = form.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = form.Id })
+    </li>
+    }
+</ul>
