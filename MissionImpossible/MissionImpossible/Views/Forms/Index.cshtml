@@ -12,7 +12,7 @@
 <ul>
     @foreach (var form in Model)
     {
-        <li>@form.Form_name (@form.Type) <br> @form.Description
+        <li>@form.Form_name (@form.Type)<b>@Html.ActionLink("View Application", "View", new { form })</b> <br> @form.Description
             @Html.ActionLink("Edit", "Edit", new { id = form.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id = form.Id })
     </li>
