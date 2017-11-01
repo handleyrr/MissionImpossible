@@ -22,3 +22,16 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.dash {
+    list-style: none !important;
+    margin-left: -2.8em;
+}
+
+.dash li {
+    text-align: center !important;
+    width: 10em !important;
+    padding: .2em !important;
+    display: inline-block !important;
+    margin-right: .4em !important;
+}
