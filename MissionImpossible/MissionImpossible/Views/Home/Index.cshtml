@@ -1,10 +1,19 @@
 ﻿@using Microsoft.AspNet.Identity;
+@model IEnumerable<MissionImpossible.Models.Form>
 
-f@{
+@{
     ViewBag.Title = "Home Page";
 }
 
-<h2>Home Page</h2>
+<h2>Forms and Applications</h2>
+
+<ul>
+    @foreach (var form in Model)
+{
+    <li>form.Form_name (@form.Type)<br> @form.Description</li>
+}
+    </ul>
+
 <ul class="dash">
     <li class="btn-default">@Html.ActionLink("Apply","Index", "Forms")</li>
     @if (User.IsInRole("Admin"))
